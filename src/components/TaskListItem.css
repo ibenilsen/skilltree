@@ -1,0 +1,7 @@
+.TaskListItem {
+  padding: 2em 0;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+}
+.TaskListItem .subtitle {
+  margin-bottom:.5em;
+}
