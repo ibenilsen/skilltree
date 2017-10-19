@@ -1,15 +1,24 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-
+import './TopNav.css';
 class TopNav extends Component {
+  constructor(props){
+  super(props);
+  this.state = { isHovered: false };
+}
+  handleHover(){
+      this.setState({
+          isHovered: !this.state.isHovered
+      });
+  }
   render() {
     return (
-      <div className="topNav">
+      <div className="TopNav">
         <nav className="navbar is-link" role="navigation" aria-label="main navigation">
           <div className="navbar-menu width-constraint">
             <div className="navbar-start"><div className="navbar-item logo">SkillTree</div></div>
             <div className="navbar-end">
-              <div className="navbar-item has-dropdown ">
+              <div className={this.state.isHovered ? "navbar-item has-dropdown is-active" : "navbar-item has-dropdown"} onMouseEnter={this.handleHover.bind(this)} onMouseLeave={this.handleHover.bind(this)}>
                 <a className="navbar-link">Ben Nilsen</a>
                 <div className="navbar-dropdown is-right">
                   <a className="navbar-item">Settings</a>
