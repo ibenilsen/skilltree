@@ -1,7 +1,6 @@
 .TaskListItem {
   padding: 2em 0;
   border-bottom: 1px solid rgba(0,0,0,.05);
-  cursor:pointer;
   opacity:.8;
 }
 .TaskListItem:hover {
@@ -9,4 +8,7 @@
 }
 .TaskListItem .subtitle {
   margin-bottom:.5em;
+}
+.TaskList {
+  width:100%;
 }

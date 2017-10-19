@@ -54,29 +54,7 @@ body {
   width:100%;
 }
 
-.buildMenu {
-  margin-bottom:2em;
-  display:flex;
-  align-items: center;
-}
-.buildMenu > .button {
-  margin-left:1em;
-}
-.buildMenu .buildItem {
-  display:inline-block;
-  margin:0 .5em;
-  cursor:pointer;
 
-}
-
-.buildMenu .buildItem  {
-  transition:all 200ms ease;
-  opacity:.5;
-  max-width:85px;
-}
-.buildMenu .buildItem:hover, .buildMenu .buildItem.active  {
-  opacity:1;
-}
 
 .menu.horizontal .menu-list {
   display:flex;

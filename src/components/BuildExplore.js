@@ -7,8 +7,7 @@ class BuildExplore extends Component {
       <div className="BuildExplore">
         <div className="card">
           <div className="card-content">
-            <h5 className="menu-label">Build Explore</h5>
-            <BuildMenu />
+            <h1 className="title">Build Finder</h1>
           </div>
         </div>
       </div>

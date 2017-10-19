@@ -1,0 +1,26 @@
+.BuildMenu > .content {
+  margin-bottom:2em;
+  align-items: center;
+  display:flex;
+}
+.BuildMenu > .button {
+  margin-left:1em;
+}
+.BuildMenu .BuildCard {
+  display:inline-block;
+  margin-right: 1em;
+  cursor:pointer;
+  opacity:.8;
+}
+
+.BuildMenu .BuildCard .card  {
+  border:1px solid transparent;
+  transition:all 200ms ease;
+}
+.BuildMenu .BuildCard:hover, .BuildMenu .BuildCard.active {
+  opacity:1;
+}
+.BuildMenu .BuildCard:hover .card, .BuildMenu .BuildCard.active .card {
+  border:1px solid #00aeff;
+  opacity:1;
+}
