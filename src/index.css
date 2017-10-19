@@ -31,10 +31,10 @@ body {
 
 .card {
   border-radius:.5em;
-  box-shadow:0 .5em 2em -.5em rgba(0,0,0,.1), 0 0 0 1px rgba(0,0,0,.03);
+  box-shadow:0 .5em 2em -.5em rgba(0,0,0,.1), 0 0 0 1px rgba(0,0,0,.05);
 }
 .card:hover {
-  box-shadow:0 .5em 2em -.5em rgba(0,0,0,.15), 0 0 0 1px rgba(0,0,0,.06);
+  box-shadow:0 .5em 2em -.5em rgba(0,0,0,.15), 0 0 0 1px rgba(0,0,0,.07);
 
 }
 
@@ -92,7 +92,7 @@ body {
   cursor: pointer;
 }
 .check:hover, .check.checked {
-  background:#00aeff;
+  background:#3272dc;
 }
 .check:hover .check-icon, .check.checked .check-icon {
   fill:#fff;

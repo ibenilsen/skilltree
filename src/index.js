@@ -12,8 +12,8 @@ import promise from 'redux-promise';
 import reducers from './reducers';
 import App from './App';
 import BuildExplore from './components/BuildExplore';
-import Overview from './components/Overview';
-import LeaderBoard from './components/LeaderBoard';
+import Overview from './components/Overview/Overview';
+import LeaderBoard from './components/LeaderBoard/LeaderBoard';
 import Tournaments from './components/Tournaments/Tournaments';
 
 

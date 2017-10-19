@@ -1,69 +1,70 @@
 import React, { Component } from 'react';
-import { Polar } from 'react-chartjs-2';
+import { connect } from 'react-redux';
 import './ProgressItem.css';
 import TaskList from './TaskList/TaskList';
-import build3 from '../images/builds/12.svg';
 import './BuildProgressCard.css';
+import _ from 'lodash';
+
 class BuildProgressCard extends Component {
+  getCategories() {
+    const tasks = this.props.build.tasks;
+    let result = {}
+    _.forEach(tasks, (task) => {
+      _.forEach(task.tags, (tag) => {
+        if(result[tag.name]) {
+          result[tag.name]['total'] += tag.value
+        } else {
+          result[tag.name] = {total: tag.value, name: tag.name, completed: 0}
+        }
+        if(task.completed) {
+          if(result[tag.name]) {
+            result[tag.name]['completed'] += tag.value
+          } else {
+            result[tag.name] = {total: tag.value, name: tag.name, completed: tag.value}
+          }
+        }
+      })
+    })
+    return Object.values(result);
+  }
+  renderProgressBars() {
+    const result = this.getCategories();
+
+    return result.map((item) => {
+      let levelLength = item.total / 5;
+      let currLevel = Math.floor(item.completed / levelLength);
+      console.log(item.completed, item.total);
+      // let percentage = ((item.completed - (levelLength * (currLevel)) ) / levelLength) * 100;
+      const colors = ['','is-info', 'is-link', 'is-primary', 'is-success'];
+      const percentage = (item.completed / item.total) * 100;
+      return (
+        <div className="ProgressItem" key={item.name}>
+          <p className="menu-label">{item.name}</p>
+          <span className="nextLevel">{currLevel}</span>
+          <progress className={`progress ${colors[currLevel - 1]}`} value={percentage} max="100">{percentage}%</progress>
+        </div>
+      )
+    })
+  }
   render() {
+    const {title, subtitle, image} = this.props.build;
     return (
       <div className="BuildProgressCard card">
         <div className="card-content meta is-flex">
-          <div className="image"><img src={build3} /></div>
+          <div className="image"><img src={require(`../images/builds/${image}.svg`)} /></div>
           <div className="titling">
-            <h5 className="title is-5">Front End Wizard</h5>
-            <h2 className="subtitle">Master the arts of front end. Become a valuable asset in the valley of silicon.</h2>
+            <h5 className="title is-5">{title}</h5>
+            <h2 className="subtitle">{subtitle}</h2>
           </div>
         </div>
         <div className="card-content">
-
-
-
           <div className="columns">
             <div className="column is-8 center-box flex-column">
-              {/* <h1 className="title is-1">6x</h1>
-              <h4 className="subtitle menu-label">Daily Progress Streak</h4> */}
-              <TaskList />
+              <TaskList build={this.props.build} categories={this.getCategories()}/>
             </div>
             <div className="column">
-
-              <div className="ProgressItem">
-                <p className="menu-label">ReactJS</p>
-                <span className="nextLevel">6</span>
-                <progress className="progress is-primary" value="80" max="100">30%</progress>
-              </div>
-              <div className="ProgressItem">
-                <p className="menu-label">Webpack</p>
-                <span className="nextLevel">4</span>
-                <progress className="progress is-link" value="30" max="100">30%</progress>
-              </div>
-
-              <div className="ProgressItem">
-                <p className="menu-label">SCSS</p>
-                <span className="nextLevel">3</span>
-                <progress className="progress is-info" value="45" max="100">45%</progress>
-              </div>
-
-              <div className="ProgressItem">
-                <p className="menu-label">Node</p>
-                <span className="nextLevel">4</span>
-                <progress className="progress is-link" value="60" max="100">60%</progress>
-              </div>
-
-              <div className="ProgressItem">
-                <p className="menu-label">MongoDB</p>
-                <span className="nextLevel">6</span>
-                <progress className="progress is-primary" value="25" max="100">75%</progress>
-              </div>
-
-              <div className="ProgressItem">
-                <p className="menu-label">JavaScript</p>
-                <span className="nextLevel">7</span>
-                <progress className="progress is-danger" value="40" max="100">90%</progress>
-              </div>
-
+              {this.renderProgressBars()}
             </div>
-
           </div>
         </div>
       </div>
@@ -71,4 +72,8 @@ class BuildProgressCard extends Component {
   }
 }
 
-export default BuildProgressCard;
+function mapStateToProps(state) {
+  return {activeBuild: state.activeBuild}
+}
+
+export default connect(mapStateToProps)(BuildProgressCard);

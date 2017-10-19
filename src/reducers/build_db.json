@@ -1,0 +1,233 @@
+[
+  {
+    "id": "1",
+    "title": "Casanova",
+    "subtitle": "Become a master of romance",
+    "progress": "30",
+    "image": "13",
+    "tasks": [
+      {
+        "title": "How to Win Friends & Influence People",
+        "subtitle": "A good primer for socializing",
+        "type": "url",
+        "url": "https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034",
+        "completed": true,
+        "tags": [
+          {
+            "name": "Social",
+            "value": 150
+          },
+          {
+            "name": "Cunning",
+            "value": 50
+          },
+          {
+            "name": "Life",
+            "value": 100
+          },
+          {
+            "name": "Anecdotal",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "title": "The Game: Penetrating the Secret Society of Pickup Artists",
+        "subtitle": "Stories from a pick up artist.",
+        "type": "url",
+        "url": "https://www.udemy.com/instagram-marketing-cash-in-on-your-passion/",
+        "completed": false,
+        "tags": [
+          {
+            "name": "Social",
+            "value": 150
+          },
+          {
+            "name": "Anecdotal",
+            "value": 100
+          },
+          {
+            "name": "Cunning",
+            "value": 200
+          },
+          {
+            "name": "Life",
+            "value": 150
+          }
+        ]
+      },
+      {
+        "title": "Seattle Dance Classes - Groupon",
+        "subtitle": "Learn to dance.",
+        "type": "url",
+        "url": "https://www.groupon.com/local/seattle/dance-classes",
+        "completed": true,
+        "tags": [
+          {
+            "name": "Social",
+            "value": 25
+          },
+          {
+            "name": "Life",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "title": "Toastmasters",
+        "subtitle": "Get far out of your social comfort zone. Learn to speak to a room of people.",
+        "type": "url",
+        "url": "https://www.toastmasters.org/",
+        "completed": false,
+        "tags": [
+          {
+            "name": "Bravery",
+            "value": 200
+          },
+          {
+            "name": "Social",
+            "value": 50
+          },
+          {
+            "name": "Life",
+            "value": 150
+          }
+        ]
+      }
+    ]
+
+  },
+  {
+    "id": "2",
+    "title": "Instagram Guru",
+    "subtitle": "Start taking better photos and master your social media game.",
+    "progress": "30",
+    "image": "25",
+    "tasks": [
+      {
+        "title": "Instagram Marketing: Gain Influence, Cash in on Your Passion",
+        "subtitle": "Attract Hyper-Targeted Instagram Followers Around What You Love to Become an Influencer and Build Your Business",
+        "type": "url",
+        "url": "https://www.udemy.com/instagram-marketing-cash-in-on-your-passion/",
+        "completed": false,
+        "tags": [
+          {
+            "name": "Photography",
+            "value": 25
+          },
+          {
+            "name": "Instagram",
+            "value": 80
+          }
+        ]
+      },
+      {
+        "title": "10 Top Photography Composition Rules",
+        "subtitle": "There are many composition guidelines which can be applied in almost any situation, to enhance the impact of a scene. Below are ten of the most popular and most widely respected composition rules.",
+        "type": "url",
+        "url": "http://www.amateursnapper.com/photography/10-top-photography-composition-rules",
+        "completed": true,
+        "tags": [
+          {
+            "name": "Photography",
+            "value": 25
+          }
+        ]
+      },
+      {
+        "title": "RAW vs. JPEG – the real story",
+        "subtitle": "Graphic illustrations [and explanations] of the difference between RAW and JPEG (also called JPG). Understanding this will help with an understanding of why correct exposure and white balance in the camera are important.",
+        "type": "url",
+        "url": "http://www.prophotolife.com/2008/04/29/tech-raw-vs-jpeg-the-real-story/",
+        "completed": false,
+        "tags": [
+          {
+            "name": "Photography",
+            "value": 25
+          }
+        ]
+      }
+    ]
+
+  },
+  {
+    "id": "3",
+    "title": "Front End Wizard",
+    "subtitle": "Master the arts of front end. Become a valuable asset in the valley of silicon.",
+    "progress": "90",
+    "image": "12",
+    "tasks": [
+      {
+        "title": "Read the JS Docs",
+        "subtitle": "JavaScript is the programming language of HTML and the Web. JavaScript is easy to learn. This tutorial will teach you JavaScript from basic to advanced.",
+        "type": "url",
+        "url": "https://www.w3schools.com/js/",
+        "completed": true,
+
+        "tags": [
+          {
+            "name": "JavaScript",
+            "value": 60
+          }
+        ]
+      },
+      {
+        "title": "JavaScript: Understanding the Weird Parts",
+        "subtitle": "An advanced JavaScript course for everyone! Scope, closures, prototypes, build your own framework, and more.",
+        "type": "url",
+        "url": "https://www.udemy.com/understand-javascript/",
+        "completed": true,
+        "tags": [
+          {
+            "name": "JavaScript",
+            "value": 50
+          },
+          {
+            "name": "CSS",
+            "value": 25
+          },
+          {
+            "name": "HTML5",
+            "value": 25
+          }
+        ]
+      },
+      {
+        "title": "SCSS Quickstart",
+        "subtitle": "Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.",
+        "type": "url",
+        "url": "http://sass-lang.com/guide",
+        "completed": false,
+        "tags": [
+          {
+            "name": "SCSS",
+            "value": 100
+          },
+          {
+            "name": "CSS",
+            "value": 100
+          }
+        ]
+      },
+
+      {
+        "title": "The Complete Developers Guide to MongoDB",
+        "subtitle": "Master MongoDB and Mongoose design with a test-driven approach",
+        "type": "url",
+        "url": "https://www.udemy.com/the-complete-developers-guide-to-mongodb/",
+        "completed": true,
+        "tags": [
+          {
+            "name": "MongoDB",
+            "value": 100
+          },
+          {
+            "name": "JavaScript",
+            "value": 50
+          }
+        ]
+      }
+    ]
+
+  }
+]
