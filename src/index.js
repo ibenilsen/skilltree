@@ -14,6 +14,9 @@ import App from './App';
 import BuildExplore from './components/BuildExplore';
 import Overview from './components/Overview';
 import LeaderBoard from './components/LeaderBoard';
+import Tournaments from './components/Tournaments/Tournaments';
+
+
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
@@ -22,6 +25,7 @@ ReactDOM.render(
         <Switch>
           <Route path="/builds/" component={BuildExplore} />
           <Route path="/hall/" component={LeaderBoard} />
+          <Route path="/tournaments/" component={Tournaments} />
 
           <Route path="/" component={Overview} />
         </Switch>

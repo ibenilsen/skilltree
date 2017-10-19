@@ -29,7 +29,7 @@ class TopNav extends Component {
                 <Link to={`/`} className="navbar-item">Dashboard</Link>
                 <Link to={`/builds`} className="navbar-item">Explore Builds</Link>
                 <Link to={`/hall`} className="navbar-item">Hall of Fame</Link>
-                <a className="navbar-item" href="#">Tournaments</a>
+                <Link to={`/tournaments`} className="navbar-item">Tournaments</Link>
               </div>
             </div>
           </div>
