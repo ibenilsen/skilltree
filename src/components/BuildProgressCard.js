@@ -85,7 +85,9 @@ class BuildProgressCard extends Component {
               </div>
 
             </div>
-            <div className="column is-4">
+            <div className="column is-3 center-box flex-column">
+                <h1 className="title is-1">6x</h1>
+                <h4 className="subtitle menu-label">Daily Progress Streak</h4>
 
             </div>
           </div>

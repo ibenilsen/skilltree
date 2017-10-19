@@ -11,15 +11,18 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import promise from 'redux-promise';
 import reducers from './reducers';
 import App from './App';
+import BuildExplore from './components/BuildExplore';
 import Overview from './components/Overview';
-
+import LeaderBoard from './components/LeaderBoard';
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <App>
         <Switch>
-          <Route path="/:company/" component={Overview} />
+          <Route path="/builds/" component={BuildExplore} />
+          <Route path="/hall/" component={LeaderBoard} />
+
           <Route path="/" component={Overview} />
         </Switch>
       </App>

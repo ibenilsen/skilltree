@@ -19,7 +19,7 @@ class TaskList extends Component {
         </div>
         <div className="menu">
           <TaskListItem taskText={'Read the JS Docs'}/>
-          <TaskListItem taskText={'An SCSS Quickstart'}/>
+          <TaskListItem taskText={'An SCSS Quickstart'} checked={true}/>
           <TaskListItem taskText={'JavaScript: The weird parts'}/>
           <TaskListItem taskText={'MongoDB for Beginners'}/>
 

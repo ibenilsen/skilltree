@@ -113,10 +113,10 @@ body {
   transform: translateX(-50%) translateY(-50%);
   cursor: pointer;
 }
-.check:hover {
+.check:hover, .check.checked {
   background:#00aeff;
 }
-.check:hover .check-icon {
+.check:hover .check-icon, .check.checked .check-icon {
   fill:#fff;
 }
 .check:before {
