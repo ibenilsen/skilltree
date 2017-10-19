@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import BuildMenu from './BuildMenu';
-
 class BuildExplore extends Component {
   render() {
     return (

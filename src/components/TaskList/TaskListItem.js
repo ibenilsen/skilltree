@@ -15,7 +15,7 @@ class TaskListItem extends Component {
     })
   }
   render() {
-    const {title, subtitle, tags, url, completed} = this.props.task;
+    const {title, subtitle, url, completed} = this.props.task;
     return (
       <div className="TaskListItem ">
         <div className="columns">

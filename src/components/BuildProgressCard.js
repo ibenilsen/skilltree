@@ -33,7 +33,6 @@ class BuildProgressCard extends Component {
     return result.map((item) => {
       let levelLength = item.total / 5;
       let currLevel = Math.floor(item.completed / levelLength);
-      console.log(item.completed, item.total);
       // let percentage = ((item.completed - (levelLength * (currLevel)) ) / levelLength) * 100;
       const colors = ['','is-info', 'is-link', 'is-primary', 'is-success'];
       const percentage = (item.completed / item.total) * 100;
@@ -51,7 +50,7 @@ class BuildProgressCard extends Component {
     return (
       <div className="BuildProgressCard card">
         <div className="card-content meta is-flex">
-          <div className="image"><img src={require(`../images/builds/${image}.svg`)} /></div>
+          <div className="image"><img src={require(`../images/builds/${image}.svg`)} alt={title}/></div>
           <div className="titling">
             <h5 className="title is-5">{title}</h5>
             <h2 className="subtitle">{subtitle}</h2>

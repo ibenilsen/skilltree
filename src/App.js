@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Link } from 'react-router-dom';
 import TopNav from './components/navigation/TopNav';
 class App extends Component {
   render() {

@@ -19,7 +19,7 @@ class BuildCard extends Component {
       <div className={`BuildCard ${isActiveBuild ? 'active' : ''}`} onClick={onClick}>
         <div className="card">
           <div className="card-content has-text-centered">
-            <img src={require(`../images/builds/${image}.svg`)} />
+            <img src={require(`../images/builds/${image}.svg`)} alt={title}/>
             <div className="menu-label">{title}</div>
 
             <progress className="progress is-small is-success" value={progress} max="100">{progress}%</progress>
