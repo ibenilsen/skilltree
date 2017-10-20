@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { selectActiveBuild } from '../actions/index';
 import { bindActionCreators } from 'redux';
 
-class BuildCard extends Component {
+class BuildMenuItem extends Component {
   render() {
     const {title, progress, image, id} = this.props.build;
     const onClick = event => {
@@ -16,17 +16,12 @@ class BuildCard extends Component {
       isActiveBuild = id === this.props.activeBuild.id;
     }
     return (
-      <div className={`BuildCard ${isActiveBuild ? 'active' : ''}`} onClick={onClick}>
-        <div className="card">
-          <div className="card-content has-text-centered">
+      <li className={`BuildMenuItem ${isActiveBuild ? 'active' : ''}`} onClick={onClick}>
             <img src={require(`../images/builds/${image}.svg`)} alt={title}/>
-            <div className="menu-label line-clamp line-clamp-2 is-justify-center">{title}</div>
+            {title}
+            {/* <progress className="progress is-small is-success" value={progress} max="100">{progress}%</progress> */}
 
-            <progress className="progress is-small is-success" value={progress} max="100">{progress}%</progress>
-          </div>
-        </div>
-
-      </div>
+      </li>
     )
   }
 }
@@ -39,4 +34,4 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({selectActiveBuild}, dispatch)
 }
-export default connect(mapStateToProps, mapDispatchToProps)(BuildCard);
+export default connect(mapStateToProps, mapDispatchToProps)(BuildMenuItem);

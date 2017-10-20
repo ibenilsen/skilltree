@@ -12,6 +12,9 @@
   cursor:pointer;
   opacity:.8;
 }
+.BuildMenu .menu-label {
+  margin-left:1em;
+}
 
 .BuildMenu .BuildCard .card  {
   border:1px solid transparent;
@@ -23,4 +26,22 @@
 .BuildMenu .BuildCard:hover .card, .BuildMenu .BuildCard.active .card {
   border:1px solid #00aeff;
   opacity:1;
+}
+
+.BuildMenuItem {
+  display: flex;
+  align-items: center;
+  margin: .5em 0;
+  border-radius:5px;
+  padding:5px;
+  border:1px solid transparent;
+  cursor:pointer;
+}
+.BuildMenuItem.active {
+  background:white;
+  border:1px solid #ddd;
+}
+.BuildMenuItem img {
+  max-width:35px;
+  margin-right:.25em;
 }

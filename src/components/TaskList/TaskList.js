@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TaskListItem from './TaskListItem';
-import './TaskList.css';
+
 class TaskList extends Component {
   renderTabs() {
     return this.props.categories.map((item) => {

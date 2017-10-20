@@ -6,10 +6,12 @@ class TaskListItem extends Component {
     return this.props.task.tags.map((tag) => {
       return (
         <div className="control" key={tag.name}>
-          <div className="tags has-addons">
+          {/* <span className="tag is-rounded is-small">{tag.name}</span> */}
+
+          {/* <div className="tags has-addons">
             <span className="tag is-rounded">{tag.name}</span>
-            <span className="tag is-dark is-rounded">+{tag.value}</span>
-          </div>
+            <span className="tag  is-rounded">+{tag.value}</span>
+          </div> */}
         </div>
       )
     })
@@ -21,8 +23,8 @@ class TaskListItem extends Component {
         <div className="columns">
           <div className="column">
             <Link to={url} target="_blank">
-              <h5 className="title is-5">{title}</h5>
-              <h6 className="subtitle is-6">{subtitle}</h6>
+              <h5 className="title is-6 line-clamp line-clamp-1">{title}</h5>
+              <h6 className="subtitle is-6 line-clamp line-clamp-2">{subtitle}</h6>
             </Link>
             <div className="field is-grouped is-grouped-multiline">
               {this.renderTags()}

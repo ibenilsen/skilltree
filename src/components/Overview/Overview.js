@@ -1,14 +1,21 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
-import BuildProgressCard from '../BuildProgressCard';
+import BuildSkillTree from 'BuildSkillTree';
+import BuildProgressBars from 'BuildProgressBars';
+
 import './Overview.css';
-import BuildMenu from '../BuildMenu';
+import BuildMenu from 'BuildMenu';
 
 class Overview extends Component {
-  renderProgressCard() {
+  renderSkillTree() {
     if(this.props.activeBuild) {
-      return <BuildProgressCard build={this.props.activeBuild}/>
+      return <BuildSkillTree build={this.props.activeBuild}/>
+    }
+  }
+  renderProgressBars() {
+    if(this.props.activeBuild) {
+      return <BuildProgressBars build={this.props.activeBuild}/>
     }
   }
   render() {
@@ -17,8 +24,22 @@ class Overview extends Component {
     };
     return (
       <div className="Overview">
-        <BuildMenu onSelect={onSelect}/>
-        {this.renderProgressCard()}
+        <div className="columns">
+          <div className="column is-3">
+            <BuildMenu onSelect={onSelect}/>
+          </div>
+          <div className="column">
+            {this.renderSkillTree()}
+          </div>
+          <div className="column is-3 is-hidden-mobile">
+            <div className="card">
+              <div className="card-content">
+                <div className="menu-label">Build Progress</div>
+                {this.renderProgressBars()}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
     )

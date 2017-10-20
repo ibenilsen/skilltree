@@ -1,24 +1,30 @@
 import React, {Component } from 'react';
 import { connect } from 'react-redux';
-import BuildCard from './BuildCard';
+import BuildMenuItem from './BuildMenuItem';
 
 import './BuildMenu.css';
 class BuildMenu extends Component {
   renderBuilds() {
     return this.props.builds.map((build) => {
-      return <BuildCard build={build} onSelect={this.props.onSelect} key={build.id}/>
+      return <BuildMenuItem build={build} onSelect={this.props.onSelect} key={build.id}/>
     })
   }
   render() {
     return (
       <div className="BuildMenu">
-        <div className="menu-label">Select A Build</div>
-        <div className="content">
-          {this.renderBuilds()}
-          <a className="button">
-            <span>New Build</span>
-          </a>
-        </div>
+        <aside className="menu">
+          <p className="menu-label">Active Builds</p>
+          <ul className="menu-list">
+            {this.renderBuilds()}
+          </ul>
+        </aside>
+        <ul className="menu-list">
+          <li>
+            <a className="button is-light">
+              <span>New Build</span>
+            </a>
+          </li>
+        </ul>
 
       </div>
     )

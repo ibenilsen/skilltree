@@ -1,6 +1,7 @@
 
 import 'bulma/css/bulma.css';
-import './index.css';
+import './style/index.css';
+import './style/line-clamp.css';
 
 import registerServiceWorker from './registerServiceWorker';
 import React from 'react';
@@ -10,11 +11,11 @@ import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import promise from 'redux-promise';
 import reducers from './reducers';
-import App from './App';
-import BuildExplore from './components/BuildExplore';
-import Overview from './components/Overview/Overview';
-import LeaderBoard from './components/LeaderBoard/LeaderBoard';
-import Tournaments from './components/Tournaments/Tournaments';
+import App from 'App';
+import BuildExplore from 'BuildExplore';
+import Overview from 'Overview/Overview';
+import LeaderBoard from 'LeaderBoard/LeaderBoard';
+import Tournaments from 'Tournaments/Tournaments';
 
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
