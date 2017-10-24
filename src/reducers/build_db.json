@@ -12,6 +12,7 @@
         "type": "url",
         "url": "https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034",
         "completed": true,
+        "score": 110,
         "tags": [
           {
             "name": "Social",
@@ -37,6 +38,7 @@
         "type": "url",
         "url": "https://www.udemy.com/instagram-marketing-cash-in-on-your-passion/",
         "completed": false,
+        "score": 82,
         "tags": [
           {
             "name": "Social",
@@ -62,6 +64,7 @@
         "type": "url",
         "url": "https://www.groupon.com/local/seattle/dance-classes",
         "completed": true,
+        "score": 77,
         "tags": [
           {
             "name": "Social",
@@ -79,6 +82,7 @@
         "type": "url",
         "url": "https://www.toastmasters.org/",
         "completed": false,
+        "score": 75,
         "tags": [
           {
             "name": "Bravery",
@@ -110,6 +114,7 @@
         "type": "url",
         "url": "https://www.udemy.com/instagram-marketing-cash-in-on-your-passion/",
         "completed": false,
+        "score": 252,
         "tags": [
           {
             "name": "Photography",
@@ -127,6 +132,7 @@
         "type": "url",
         "url": "http://www.amateursnapper.com/photography/10-top-photography-composition-rules",
         "completed": true,
+        "score": 187,
         "tags": [
           {
             "name": "Photography",
@@ -140,6 +146,7 @@
         "type": "url",
         "url": "http://www.prophotolife.com/2008/04/29/tech-raw-vs-jpeg-the-real-story/",
         "completed": false,
+        "score": 88,
         "tags": [
           {
             "name": "Photography",
@@ -163,7 +170,7 @@
         "type": "url",
         "url": "https://www.w3schools.com/js/",
         "completed": false,
-
+        "score": 223,
         "tags": [
           {
             "name": "JavaScript",
@@ -177,6 +184,7 @@
         "type": "url",
         "url": "https://www.udemy.com/understand-javascript/",
         "completed": true,
+        "score": 209,
         "tags": [
           {
             "name": "JavaScript",
@@ -198,6 +206,7 @@
         "type": "url",
         "url": "http://sass-lang.com/guide",
         "completed": false,
+        "score": 134,
         "tags": [
           {
             "name": "SCSS",
@@ -216,6 +225,8 @@
         "type": "url",
         "url": "https://www.udemy.com/the-complete-developers-guide-to-mongodb/",
         "completed": true,
+        "score": 97,
+
         "tags": [
           {
             "name": "MongoDB",
@@ -228,6 +239,60 @@
         ]
       }
     ]
+
+  },
+  {
+    "id": "4",
+    "title": "Marketing Madman",
+    "subtitle": "Master the arts of front end. Become a valuable asset in the valley of silicon.",
+    "progress": "0",
+    "image": "03",
+    "comingsoon": true
+
+  },
+  {
+    "id": "5",
+    "title": "Naturalist",
+    "subtitle": "Master the arts of front end. Become a valuable asset in the valley of silicon.",
+    "progress": "0",
+    "image": "04",
+    "comingsoon": true
+
+  },
+  {
+    "id": "6",
+    "title": "H4x0r",
+    "subtitle": "Master the arts of front end. Become a valuable asset in the valley of silicon.",
+    "progress": "0",
+    "image": "05",
+    "comingsoon": true
+
+  },
+  {
+    "id": "7",
+    "title": "Mad Scientist",
+    "subtitle": "Master the arts of front end. Become a valuable asset in the valley of silicon.",
+    "progress": "0",
+    "image": "06",
+    "comingsoon": true
+
+  },
+  {
+    "id": "8",
+    "title": "Ambitionist",
+    "subtitle": "Master the arts of front end. Become a valuable asset in the valley of silicon.",
+    "progress": "0",
+    "image": "07",
+    "comingsoon": true
+
+  },
+  {
+    "id": "9",
+    "title": "Gadgeteer",
+    "subtitle": "Master the arts of front end. Become a valuable asset in the valley of silicon.",
+    "progress": "0",
+    "image": "20",
+    "comingsoon": true
 
   }
 ]

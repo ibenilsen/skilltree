@@ -1,43 +1,29 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
-import BuildSkillTree from 'BuildSkillTree';
-import BuildProgressBars from 'BuildProgressBars';
-
+import BuildSkillTree from '../BuildSkillTree';
+import SignIn from '../sign-in';
 import './Overview.css';
-import BuildMenu from 'BuildMenu';
+import BuildMenu from './BuildMenu/BuildMenu';
+import { isAuthenticated, getAuth } from '../../auth';
 
 class Overview extends Component {
-  renderSkillTree() {
-    if(this.props.activeBuild) {
-      return <BuildSkillTree build={this.props.activeBuild}/>
-    }
-  }
-  renderProgressBars() {
-    if(this.props.activeBuild) {
-      return <BuildProgressBars build={this.props.activeBuild}/>
+  renderSignIn() {
+    if(!this.props.authenticated) {
+      return <SignIn />
     }
   }
   render() {
-    const onSelect = event => {
-      event.preventDefault();
-    };
+    console.log(this);
     return (
       <div className="Overview">
         <div className="columns">
+          {/* {this.renderSignIn()} */}
           <div className="column is-3">
-            <BuildMenu onSelect={onSelect}/>
+            <BuildMenu activeBuild={this.props.activeBuild}/>
           </div>
           <div className="column">
-            {this.renderSkillTree()}
-          </div>
-          <div className="column is-3 is-hidden-mobile">
-            <div className="card">
-              <div className="card-content">
-                <div className="menu-label">Build Progress</div>
-                {this.renderProgressBars()}
-              </div>
-            </div>
+            <BuildSkillTree build={this.props.activeBuild}/>
           </div>
         </div>
       </div>
@@ -46,8 +32,11 @@ class Overview extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {activeBuild: state.activeBuild}
-}
+const mapStateToProps = function(state) {
+  return {
+    authenticated: isAuthenticated(state),
+    activeBuild: state.activeBuild
+  }
+};
 
 export default connect(mapStateToProps)(Overview);

@@ -37,6 +37,10 @@
   border:1px solid transparent;
   cursor:pointer;
 }
+.BuildMenuItem progress {
+  height: .25em;
+  margin-top: .25em;
+}
 .BuildMenuItem.active {
   background:white;
   border:1px solid #ddd;

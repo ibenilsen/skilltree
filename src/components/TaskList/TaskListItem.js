@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './TaskListItem.css';
 import { Link } from 'react-router-dom';
+import Ionicon from 'react-ionicons'
+
 class TaskListItem extends Component {
   renderTags() {
     return this.props.task.tags.map((tag) => {
@@ -17,11 +19,16 @@ class TaskListItem extends Component {
     })
   }
   render() {
-    const {title, subtitle, url, completed} = this.props.task;
+    const {title, subtitle, url, completed, score} = this.props.task;
     return (
       <div className="TaskListItem ">
         <div className="columns">
-          <div className="column">
+          <div className="votecontrol flex-column is-flex is-align-center is-2">
+            <a className="button is-white"><Ionicon icon="ion-ios-arrow-up"  color="#C9C9C9"/></a>
+            <span>{score}</span>
+            <a className="button is-white"><Ionicon icon="ion-ios-arrow-down" color="#C9C9C9"/></a>
+          </div>
+          <div className="column is-justify-center is-flex flex-column">
             <Link to={url} target="_blank">
               <h5 className="title is-6 line-clamp line-clamp-1">{title}</h5>
               <h6 className="subtitle is-6 line-clamp line-clamp-2">{subtitle}</h6>

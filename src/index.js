@@ -2,37 +2,38 @@
 import 'bulma/css/bulma.css';
 import './style/index.css';
 import './style/line-clamp.css';
+import './style/flexboxgrid.min.css';
 
 import registerServiceWorker from './registerServiceWorker';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import thunk from 'redux-thunk';
 import promise from 'redux-promise';
+
 import reducers from './reducers';
-import App from 'App';
-import BuildExplore from 'BuildExplore';
-import Overview from 'Overview/Overview';
-import LeaderBoard from 'LeaderBoard/LeaderBoard';
-import Tournaments from 'Tournaments/Tournaments';
+import { initAuth } from './auth';
+import App from './components/App';
 
 
-const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <App>
-        <Switch>
-          <Route path="/builds/" component={BuildExplore} />
-          <Route path="/hall/" component={LeaderBoard} />
-          <Route path="/tournaments/" component={Tournaments} />
 
-          <Route path="/" component={Overview} />
-        </Switch>
-      </App>
-    </BrowserRouter>
-  </Provider>
-  , document.getElementById('root'));
+const createStoreWithMiddleware = applyMiddleware(thunk, promise)(createStore);
+const store = createStoreWithMiddleware(reducers);
 
-  registerServiceWorker();
+registerServiceWorker();
+function render(Component) {
+  ReactDOM.render(
+    <Provider store={store}>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <App />
+      </BrowserRouter>
+    </Provider>
+    , document.getElementById('root'));
+  }
+
+
+  initAuth(store.dispatch)
+  .then(() => render(App))
+  .catch(error => console.error(error));

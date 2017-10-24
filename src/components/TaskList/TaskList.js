@@ -26,6 +26,7 @@ class TaskList extends Component {
             _.forEach(o.tags, function(tag) {
               if(tag.name === activeFilter) {
                 found = true;
+                return false;
               }
             })
           }
@@ -42,12 +43,12 @@ class TaskList extends Component {
     const filterActive = this.state.activeFilter !== '';
     return (
       <div className="TaskList">
-        <div className="tabs is-small is-marginless">
+        {/* <div className="tabs is-small is-marginless">
           <ul>
             <li className={this.state.activeFilter ? '' : 'is-active'} onClick={(event) => this.onTabChange('')}><a>All</a></li>
             {this.renderTabs()}
           </ul>
-        </div>
+        </div> */}
         <div className="menu">
           {this.renderTasks()}
         </div>
